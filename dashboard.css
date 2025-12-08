@@ -1,0 +1,324 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+} 
+
+html, body { 
+  height: 100%; 
+  margin: 0; 
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #2ecc71, #1abc9c) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  align-items: center;
+}
+
+header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  position: sticky; 
+  top: 0; 
+  z-index: 100; 
+  width: 100%; 
+  background-color: #222222; 
+  padding: clamp(10px, 2vw, 30px); 
+} 
+
+.Username{ 
+  font-weight: bolder; 
+  color: #fff; 
+  font-size: clamp(14px, 2vw, 28px); 
+} 
+
+.Username:hover{ 
+  color: #2ecc71; 
+} 
+
+.Name{ 
+  color:#fff; 
+  font-family: georgia; 
+  font-weight: bolder; 
+  padding-left: 0px; 
+  font-size: clamp(1rem, 3vw, 2.2rem); 
+} 
+
+.BAL { 
+  background-color: #fff; 
+  width: clamp(240px, 70%, 900px); 
+  border-radius: 10px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  padding: clamp(15px, 2vw, 50px); 
+  margin: clamp(8px, 2vw, 25px) 0; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+} 
+
+.credit-item { 
+  display: flex; 
+  justify-content: space-between; 
+  padding: clamp(5px, 1vw, 10px); 
+  margin-bottom: clamp(4px, 1vw, 10px); 
+  border-radius: 5px; 
+  background-color: #fff; 
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2); 
+  font-size: clamp(14px, 2vw, 24px); 
+} 
+
+.credit-amount { 
+  padding-left: clamp(4px, 1vw, 10px); 
+  flex: 1; 
+  text-align: left; 
+  font-weight: bold; 
+} 
+
+.credit-source { 
+  flex: 1; 
+  text-align: center; 
+} 
+
+.credit-date { 
+  padding-right: clamp(4px, 1vw, 10px); 
+  flex: 1; 
+  text-align: right; 
+  font-size: clamp(10px, 1.2vw, 16px); 
+  color: #555; 
+} 
+
+.transaction-container {
+  width: clamp(240px, 90%, 1000px);
+  margin: clamp(8px, 2vw, 25px) auto;
+  padding-bottom: 60px; /* avoid footer overlap */
+} 
+
+.container { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  width: 100%; 
+} 
+
+.transaction-header { 
+  display: flex; 
+  background-color: #222; 
+  color: #fff; 
+  padding: clamp(6px, 1vw, 15px); 
+  border-radius: 8px 8px 0 0; 
+  box-sizing: border-box; 
+} 
+
+#creditsList { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+} 
+
+#creditsList li {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: clamp(8px, 1vw, 15px);
+  margin-bottom: clamp(4px, 1vw, 10px);
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+} 
+
+.transaction-header span, #creditsList li span { 
+  box-sizing: border-box; 
+} 
+
+.transaction-header .header-amount, #creditsList li .amount { 
+  width: 25%; 
+  text-align: left;
+  font-weight: bold; 
+} 
+
+.transaction-header .header-reason, #creditsList li .reason { 
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+} 
+
+.transaction-header .header-datetime, #creditsList li .datetime { 
+  width: 25%;
+  text-align: right;
+  font-weight: bold;
+} 
+
+button { 
+  padding: clamp(6px, 1vw, 15px) clamp(10px, 2vw, 20px); 
+  margin-right: clamp(4px, 1vw, 10px); 
+  margin-top: clamp(4px, 1vw, 10px); 
+  cursor: pointer; 
+  font-size: clamp(10px, 1.2vw, 16px); 
+} 
+
+.AddCredit, .ReduceCredit { 
+  background: #222222; 
+  font-weight: bold;
+  color: white; 
+  border-radius: 5px;
+  padding: 5% 10% ;
+  flex: none; 
+  width: clamp(80px, 20%, 150px); 
+} 
+
+.AddCredit:hover { 
+  background: rgb(108, 209, 112); 
+} 
+
+.ReduceCredit:hover { 
+  background: #fa746f; 
+} 
+
+.Logout { 
+  border-radius: 15px; 
+  background: #ED5752; 
+  color: white; 
+  font-size: clamp(10px, 1.5vw, 16px); 
+  transition: 0.2s ease; 
+} 
+
+.Logout:hover { 
+  background: #ff2e2e; 
+}
+
+#accountModal .Logout:hover {
+    background-color: #ff2e2e !important;
+}
+
+.Balance { 
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2); 
+  color: #222222; 
+  font-size: clamp(24px, 3vw, 40px); 
+} 
+
+.button-group { 
+  display: flex; 
+  gap: clamp(8px, 2vw, 20px); 
+  margin-top: clamp(8px, 1vw, 20px); 
+  justify-content: center; 
+} 
+
+.footer {
+  width: 100%;
+  background-color: #222222;
+  color: #fff;
+  text-align: center;
+  padding: clamp(8px, 2vw, 20px) 0;
+  font-family: Arial, sans-serif;
+  font-size: clamp(10px, 1vw, 14px);
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.Product { 
+  display: flex; 
+  align-items: center; 
+  gap: clamp(4px, 2vw, 10px); 
+} 
+
+.Product img { 
+  width: clamp(35px, 5vw, 50px); 
+  height: clamp(35px, 5vw, 50px); 
+  object-fit: cover; 
+  border-radius: 6px; 
+} 
+
+.modal { 
+  display: none; 
+  position: fixed; 
+  z-index: 100; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.5); 
+  justify-content: center; 
+  align-items: center; 
+} 
+
+.modal-content { 
+  background-color: #fff; 
+  border-radius: 10px; 
+  padding: clamp(12px, 2vw, 25px); 
+  display: flex; 
+  flex-direction: column; 
+  gap: clamp(6px, 1vw, 12px); 
+  min-width: clamp(260px, 50vw, 400px); 
+} 
+
+.modal-content input, .modal-content button { 
+  padding: clamp(5px, 1vw, 10px); 
+  font-size: clamp(12px, 1.5vw, 18px); 
+} 
+
+.modal-content button{ 
+  background-color: #222222; 
+  color: #fff; 
+} 
+
+.modal-content button:hover{ 
+  background-color: #2ecc71; 
+} 
+
+.close { 
+  align-self: flex-end; 
+  font-size: clamp(14px, 1.2vw, 20px); 
+  cursor: pointer; 
+} 
+
+#accountModal .modal-content { 
+  min-width: clamp(230px, 40vw, 350px); 
+  text-align: center; 
+  gap: clamp(8px, 1vw, 15px); 
+} 
+
+#accountModal p { 
+  font-size: clamp(12px, 1vw, 16px); 
+  color: #222; 
+} 
+
+#accountModal .Logout { 
+  width: 80%; 
+  margin: 0 auto; 
+} 
+
+.Account{ 
+  color:#222222; 
+  font-family: georgia; 
+  font-weight: bolder; 
+  font-size: clamp(1rem, 3vw, 2rem); 
+} 
+
+#saveUsernameBtn { 
+  background: #222222; 
+  color: white; 
+  padding: clamp(6px, 1vw, 10px); 
+  border: none; 
+  border-radius: 5px; 
+  width: 100%; 
+  margin-top: clamp(8px, 1vw, 15px); 
+  cursor: pointer; 
+} 
+
+#saveUsernameBtn:hover { 
+  background: #2ecc71; 
+} 
+
+#changeUsernameModal .modal-content { 
+  width: clamp(260px, 50vw, 300px); 
+  padding: clamp(12px, 2vw, 20px); 
+  border-radius: 10px; 
+}

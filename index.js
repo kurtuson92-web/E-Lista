@@ -36,8 +36,8 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => res.redirect('/home'));
-app.get('/home', (req, res) => res.sendFile(path.join(__dirname, 'public', 'home.html')));
-app.get('/dashboard', (req, res) => res.sendFile(path.join(__dirname, 'public', 'dashboard.html')));
+app.get('/home', (req, res) => res.sendFile(path.join(__dirname, 'home.html')));
+app.get('/dashboard', (req, res) => res.sendFile(path.join(__dirname, 'dashboard.html')));
 
 //signup
 app.post('/signup', async (req, res) => {

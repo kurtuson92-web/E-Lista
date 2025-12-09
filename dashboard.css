@@ -222,27 +222,6 @@ button {
   left: 0;
   z-index: 100;
 }
-.FB {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.FB:link {
-  color: #ffffff;
-}
-
-.FB:visited {
-  color: #90f893;
-}
-
-.FB:hover {
-  color: #6de471;
-}
-
-.FB:active {
-  color: #ffffff;
-}
-
 
 .Product { 
   display: flex; 

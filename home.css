@@ -324,3 +324,10 @@ header{
   position: relative;
   z-index: 10;
 }
+.footer a {
+  color: #6de471;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}

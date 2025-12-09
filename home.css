@@ -328,12 +328,19 @@ header{
   color: #6de471;
   text-decoration: none;
 }
+
+.footer a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:visited {
+  color: #90f893;
+  text-decoration: none;
+}
+
 .footer a:hover {
+  color: #6de471;
   text-decoration: underline;
 }
-.FB{
-  color:#fff;
-}
-.FB:hover{
-  color:#90f893;
-}
+

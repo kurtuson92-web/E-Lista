@@ -228,6 +228,18 @@ header{
      -webkit-backdrop-filter: blur(5px);
 }
 
+#aboutModal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+}
+
 
 .modal-content {
        top: 15%;

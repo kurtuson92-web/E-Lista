@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeSignup = document.getElementById('closeSignup');
   const closeLogin = document.getElementById('closeLogin');
   const switchToSignup = document.getElementById('switchToSignup');
+  const aboutModal = document.getElementById('aboutModal');
+  const closeAbout = document.getElementById('closeAbout');
+
 
   window.openModal = (type) => {
     if (type === "login") loginModal.style.display = "block";
@@ -15,10 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
   signupBtn.addEventListener('click', () => signupModal.style.display = 'block');
   closeSignup.addEventListener('click', () => signupModal.style.display = 'none');
   closeLogin.addEventListener('click', () => loginModal.style.display = 'none');
+  closeAbout.addEventListener("click", () => aboutModal.style.display = "none");
+});
+
 
   window.addEventListener('click', (e) => {
     if (e.target === signupModal) signupModal.style.display = 'none';
     if (e.target === loginModal) loginModal.style.display = 'none';
+    if (e.target === aboutModal) aboutModal.style.display = "none";
   });
 
   switchToSignup.addEventListener('click', () => {

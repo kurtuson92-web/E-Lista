@@ -86,6 +86,27 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// About Us Modal
+const aboutModal = document.getElementById("aboutModal");
+const aboutLink = document.getElementById("aboutLink");
+const closeAbout = document.getElementById("closeAbout");
+
+aboutLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  aboutModal.style.display = "block";
+});
+
+closeAbout.addEventListener("click", () => {
+  aboutModal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === aboutModal) {
+    aboutModal.style.display = "none";
+  }
+});
+
+
 // FORGOT PASSWORD
 const forgotPasswordBtn = document.getElementById("forgotPasswordBtn");
 const forgotPasswordModal = document.getElementById("forgotPasswordModal");

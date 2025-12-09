@@ -107,6 +107,7 @@ window.addEventListener("click", (e) => {
 });
 
 
+
 // FORGOT PASSWORD
 const forgotPasswordBtn = document.getElementById("forgotPasswordBtn");
 const forgotPasswordModal = document.getElementById("forgotPasswordModal");

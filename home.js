@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.openModal = (type) => {
     if (type === "login") loginModal.style.display = "block";
     if (type === "signup") signupModal.style.display = "block";
+    if (type === "about") aboutModal.style.display = "block";
   };
 
   signupBtn.addEventListener('click', () => signupModal.style.display = 'block');
